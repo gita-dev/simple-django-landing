@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from landing_page.views import LandingView
+from django.conf.urls import url
 
 urlpatterns = [
+    url(r'^$', LandingView.as_view()),
     path('admin/', admin.site.urls),
 ]
